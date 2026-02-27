@@ -16,7 +16,7 @@ public_folder: /images
 
 # i18n configuration
 i18n:
-  structure: multiple_folders
+  structure: multiple_files
   locales: [en, fr]
   default_locale: en
 
@@ -24,8 +24,7 @@ collections:
   # Blog posts
   - name: blog
     label: "Blog / News"
-    folder: content
-    path: "{{locale}}/blog/{{slug}}"
+    folder: content/blog
     create: true
     i18n: true
     fields:
@@ -42,7 +41,7 @@ collections:
     files:
       - label: "About"
         name: "about"
-        file: "content/en/about.md"
+        file: "content/about.md"
         i18n: true
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
@@ -51,7 +50,7 @@ collections:
 
       - label: "How It Works"
         name: "how-it-works"
-        file: "content/en/how-it-works.md"
+        file: "content/how-it-works.md"
         i18n: true
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }
@@ -60,7 +59,7 @@ collections:
 
       - label: "Contact / Donate"
         name: "contact"
-        file: "content/en/contact.md"
+        file: "content/contact.md"
         i18n: true
         fields:
           - { label: "Title", name: "title", widget: "string", i18n: true }

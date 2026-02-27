@@ -15,3 +15,6 @@ Thumbs.db
 # Node (if using PostCSS/Tailwind later)
 node_modules/
 package-lock.json
+
+.wrangler/
+.hugo_build.lock

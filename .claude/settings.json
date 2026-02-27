@@ -5,7 +5,10 @@
       "Bash(git submodule status)",
       "Bash(git add -A)",
       "Bash(git commit -m \"Add PaperMod theme submodule\")",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(hugo --minify)",
+      "Bash(git rm --cached -r .wrangler .hugo_build.lock)",
+      "Bash(git commit -m \"Fix multilingual structure: use file-naming convention for PaperMod compatibility\")"
     ]
   }
 }
