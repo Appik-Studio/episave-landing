@@ -1,8 +1,9 @@
 ---
-title: "About EpiSave"
-description: "Learn about the EpiSave seizure detection project, our mission, and the team behind it."
-layout: "single"
-url: "/about/"
+title: About EpiSave!
+description: Learn about the EpiSave seizure detection project, our mission, and
+  the team behind it.
+layout: single
+url: /about/
 ---
 
 ## Our Mission
