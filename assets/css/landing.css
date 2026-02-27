@@ -10,24 +10,24 @@
   --epi-slate: #1E3A5F;
 
   /* Primary Blue (medical accent) */
-  --epi-blue: #1565C0;
-  --epi-blue-hover: #1976D2;
-  --epi-blue-glow: rgba(21, 101, 192, 0.08);
-  --epi-blue-light: #E8F0FE;
+  --epi-blue: #0284C7;
+  --epi-blue-hover: #0369A1;
+  --epi-blue-glow: rgba(2, 132, 199, 0.08);
+  --epi-blue-light: #F0F9FF;
 
   /* Teal (secondary clinical) */
-  --epi-teal: #00897B;
-  --epi-teal-soft: rgba(0, 137, 123, 0.08);
+  --epi-teal: #0D9488;
+  --epi-teal-soft: rgba(13, 148, 136, 0.08);
 
   /* Surfaces */
-  --epi-surface: #F6F8FA;
+  --epi-surface: #F8FAFC;
   --epi-white: #FFFFFF;
   --epi-border: #E2E8F0;
 
   /* Text */
-  --epi-text: #334155;
-  --epi-text-soft: #64748B;
-  --epi-text-on-dark: #CBD5E1;
+  --epi-text: #0F172A;
+  --epi-text-soft: #475569;
+  --epi-text-on-dark: #F1F5F9;
 
   /* Tokens */
   --epi-radius: 14px;
@@ -36,6 +36,12 @@
   --epi-shadow-md: 0 4px 20px rgba(11, 29, 58, 0.08);
   --epi-shadow-lg: 0 12px 40px rgba(11, 29, 58, 0.1);
   --epi-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============ Global ============ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 /* ============ PaperMod Overrides ============ */
@@ -47,25 +53,38 @@ body.list .main {
   margin: 0;
 }
 
-/* Professional Navigation Bar */
+/* Professional Navigation Bar — sticky */
 .header {
-  background: var(--epi-white);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--epi-border);
   box-shadow: 0 1px 4px rgba(11, 29, 58, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav {
   max-width: 1200px;
   padding: 0 2rem;
-  height: 72px;
+  height: 64px;
   font-family: 'Source Sans 3', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  flex-shrink: 0;
 }
 
 .logo a {
   font-family: 'Lexend', sans-serif;
   font-weight: 700;
-  font-size: 1.35rem !important;
-  color: var(--epi-navy);
+  font-size: 1.3rem !important;
+  color: var(--epi-navy) !important;
   letter-spacing: -0.01em;
 }
 
@@ -74,17 +93,19 @@ body.list .main {
 }
 
 #menu {
-  gap: 0.25rem;
+  gap: 0.15rem;
+  flex-wrap: nowrap;
 }
 
 #menu a {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
   color: var(--epi-text-soft);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.85rem;
   border-radius: 8px;
   transition: all 0.2s var(--epi-ease);
+  white-space: nowrap;
 }
 
 #menu a:hover {
