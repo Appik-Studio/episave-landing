@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git submodule update --init --recursive)",
+      "Bash(git submodule status)",
+      "Bash(git add -A)",
+      "Bash(git commit -m \"Add PaperMod theme submodule\")",
+      "Bash(git push)"
+    ]
+  }
+}
