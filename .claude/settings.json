@@ -28,7 +28,18 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1314)",
       "Bash(hugo server -D --port 1315)",
       "Bash(git add assets/css/landing.css layouts/partials/extend_head.html layouts/partials/landing/hero.html .claude/settings.json)",
-      "Bash(git add .claude/settings.json)"
+      "Bash(git add .claude/settings.json)",
+      "Bash(git add assets/css/landing.css hugo.toml layouts/partials/landing/hero.html layouts/partials/landing/cta.html)",
+      "Bash(git add hugo.toml)",
+      "Bash(npx skills find cloudflare)",
+      "Read(//var/folders/70/yhkn3t8j2996z75_j5v4f64m0000gp/T/playwright-mcp-output/1772208688051/**)",
+      "Read(//private/var/folders/70/yhkn3t8j2996z75_j5v4f64m0000gp/T/playwright-mcp-output/1772208688051/**)",
+      "Bash(curl -s http://localhost:1313/css/landing.min.c470997e7ee005f0f5cefd7d5f253447119c2a76dd852a1b2889447028d0f234.css)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1313/css/landing.min.c470997e7ee005f0f5cefd7d5f253447119c2a76dd852a1b2889447028d0f234.css)",
+      "Bash(curl -s http://localhost:1313/blog/introducing-episave/)",
+      "Bash(tr '>' '\\\\n')",
+      "Bash(pkill -f \"hugo server\")",
+      "Bash(curl -s http://localhost:1313/tags/launch/)"
     ]
   }
 }

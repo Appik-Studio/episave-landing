@@ -22,3 +22,7 @@ package-lock.json
 # Claude Code skills
 .claude/skills/
 skills-lock.json
+
+# Generated outputs
+nanobanana-output/
+.agents/

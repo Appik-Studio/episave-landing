@@ -5,7 +5,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "EpiSave",
+  "name": {{ site.Title | jsonify }},
   "url": "{{ site.BaseURL }}",
   "logo": "{{ site.BaseURL }}images/logo.png",
   "description": {{ site.Params.description | jsonify }},
@@ -79,11 +79,11 @@
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
   "author": {
     "@type": "Organization",
-    "name": "EpiSave"
+    "name": {{ site.Title | jsonify }}
   },
   "publisher": {
     "@type": "Organization",
-    "name": "EpiSave",
+    "name": {{ site.Title | jsonify }},
     "logo": {
       "@type": "ImageObject",
       "url": "{{ site.BaseURL }}images/logo.png"
@@ -101,7 +101,7 @@
   "@context": "https://schema.org",
   "@type": "MedicalDevice",
   "name": "EpiSave",
-  "description": "A seizure detection system for generalized convulsive seizures (GCS) using Android smartwatches and a companion smartphone app.",
+  "description": {{ site.Params.description | jsonify }},
   "purpose": "Detection of generalized convulsive seizures with real-time caregiver alerts to reduce SUDEP risk",
   "url": "{{ site.BaseURL }}"
 }

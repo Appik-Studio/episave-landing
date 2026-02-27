@@ -8,7 +8,7 @@
 
 {{/* Custom CSS */}}
 {{ $style := resources.Get "css/landing.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
 {{/* Scroll-triggered animations */}}
 <script>

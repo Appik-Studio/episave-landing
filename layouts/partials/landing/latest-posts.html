@@ -6,7 +6,7 @@
       {{ range first 3 $pages }}
       <article class="post-card">
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
         <p>{{ .Summary | truncate 120 }}</p>
         <a href="{{ .Permalink }}" class="read-more">{{ i18n "readMore" | default "Read more →" }}</a>
       </article>
