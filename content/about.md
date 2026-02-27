@@ -5,8 +5,7 @@ description: Learn about the EpiSave seizure detection project, our mission, and
 layout: single
 url: /about/
 ---
-
-## Our Mission
+## Our Mission!
 
 EpiSave is a seizure detection system designed to protect people with epilepsy by providing real-time alerts to their caregivers. Using commercially available Android smartwatches, EpiSave monitors for generalized convulsive seizures (GCS) and sends SMS notifications with GPS location data when a seizure is detected.
 
