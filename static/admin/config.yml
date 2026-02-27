@@ -1,0 +1,68 @@
+# Decap CMS Configuration for EpiSave
+# Editors access this at: https://episave.ch/admin/
+
+backend:
+  name: github
+  repo: Appik-Studio/episave-landing
+  branch: main
+  open_authoring: false
+
+# Staging: editorial workflow lets editors save drafts before publishing
+publish_mode: editorial_workflow
+
+# Media files stored in static/images
+media_folder: static/images
+public_folder: /images
+
+# i18n configuration
+i18n:
+  structure: multiple_folders
+  locales: [en, fr]
+  default_locale: en
+
+collections:
+  # Blog posts
+  - name: blog
+    label: "Blog / News"
+    folder: content
+    path: "{{locale}}/blog/{{slug}}"
+    create: true
+    i18n: true
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string", i18n: true }
+      - { label: "Tags", name: "tags", widget: "list", required: false, i18n: true }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+  # Static pages
+  - name: pages
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/en/about.md"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Description", name: "description", widget: "string", i18n: true }
+          - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+      - label: "How It Works"
+        name: "how-it-works"
+        file: "content/en/how-it-works.md"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Description", name: "description", widget: "string", i18n: true }
+          - { label: "Body", name: "body", widget: "markdown", i18n: true }
+
+      - label: "Contact / Donate"
+        name: "contact"
+        file: "content/en/contact.md"
+        i18n: true
+        fields:
+          - { label: "Title", name: "title", widget: "string", i18n: true }
+          - { label: "Description", name: "description", widget: "string", i18n: true }
+          - { label: "Body", name: "body", widget: "markdown", i18n: true }

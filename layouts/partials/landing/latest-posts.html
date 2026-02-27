@@ -1,0 +1,19 @@
+<section class="landing-posts" id="news">
+  <div class="landing-container">
+    <h2 class="section-title">{{ i18n "latestNews" | default "Latest News" }}</h2>
+    <div class="posts-grid">
+      {{ $pages := where site.RegularPages "Section" "blog" }}
+      {{ range first 3 $pages }}
+      <article class="post-card">
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        <p>{{ .Summary | truncate 120 }}</p>
+        <a href="{{ .Permalink }}" class="read-more">{{ i18n "readMore" | default "Read more →" }}</a>
+      </article>
+      {{ end }}
+    </div>
+    <div class="posts-all">
+      <a href="{{ relLangURL "blog" }}">{{ i18n "allPosts" | default "View all news →" }}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+EpiSave Website Technical Requirements
+1. Project Goal
+Develop a highly SEO-optimized, durable, and low-maintenance website to advertise the EpiSave project. Project Description: EpiSave is a seizure detection system for generalized convulsive seizures (GCS) using Android smartwatches (e.g., TicWatch Pro 5) and a companion smartphone app. It provides real-time alerts and SMS notifications with location data to caregivers, aiming to reduce SUDEP risks.
+2. Core Technical Constraints (Must Have)
+Architecture & Security
+Static Site Generator: Hugo (Preferred).
+Rationale: Markdown editing, minimal maintenance, small attack surface, high performance.
+Hosting/Deployment: Verified static hosting (e.g., Cloudflare Pages, GitHub Pages) with CDN.
+CI/CD: Automated deployment pipeline for updates.
+Requirement: Must support git push to deploy with a separated staging (for preview on modifications) and a 1-button production deployment when staging is OK. We have an existing CI/CD pipeline that you can use for Hugo.
+Cost Control: Must ensure controlled operating costs.
+Security: No unnecessary dynamic content or server-side rendering. HTTPS enabled and default with automated certification renewal.
+Structure & Content
+Presentation: Clean structure, strong content hierarchy, accessible storytelling.
+Multilingual Support: Native support from day one (e.g., /en/, /fr/).
+Requirement: Dedicated sitemaps and clean URLs for each language.
+Navigation:Clear "Donation / Contact" button (visible, accessible, trackable).
+Blog/News section (team-maintained, Markdown-based).
+Theme Selection: The ideal theme SHOULD NOT especially resemble toha. It MUST allow meeting all technical requirements (Multilingual, JSON-LD, SEO, Performance) with minimal code modification.
+Reference: toha is cited as an an example, not necessarily a visual strict requirement. The priority is a theme that is maintenance-free regarding core SEO/Structure specs.
+Sitemap: Complete sitemap.xml listing all pages and SEO sub-pages.
+Requirement: Even if presented as a "single page", the engine MUST generate dedicated sub-pages (e.g., /services/) and correct breadcrumbs.
+Branding
+Integration of logos, visual identity, and assets.
+Placeholder assets acceptable initially if final versions are unavailable.
+3. SEO & Performance (Must Have)
+Technical SEO
+Structured Data (JSON-LD):Compliance: Google Search Central documentation.
+Validation: 100% valid in Google Rich Results Test (warnings acceptable).
+Coverage: All relevant schema.org objects rendered on every page.
+Breadcrumbs: Must be present in JSON-LD.
+Meta Tags: Complete Open Graph (OG) tags, Twitter Cards, and standard meta descriptions.
+Performance: Optimized for Core Web Vitals (LCP, FID, CLS).
+Target: Green scores on PageSpeed Insights.
+4. Maintenance & Durability
+Durability: Static-first approach ensuring long-term availability (10+ years) on a CDN (e.g., Cloudflare) with low cost and low risk of hacking.
+Dynamic Features: Use SaaS solutions for dynamic needs (e.g., Stripe for payments/donations, external form services) to avoid backend maintenance.
+Workflow: Content updates via Markdown files.
+5. Nice to Have (Optional)
+Rich Results: Implementation of FAQ, Q&A, and other Google rich cards.
+CMS: Webflow is an acceptable alternative if Hugo is not viable, though Hugo is strongly preferred for performance and durability.
+6. Possible Recommended Themes to be based on for maintanibilty
+Based on the requirements for JSON-LD, Commercial License (MIT), Native i18n, and Performance, the following themes should be considered:
+1. HugoBlox (formerly Wowchemy)
+Github Repo: hugoblox/hugo-blox-builder
+Why: Natively supports rich JSON-LD (Schema.org), multilingual (i18n), and modular landing page blocks.
+Commercial Use: MIT License (free version).
+Cons: Can be complex due to many features; requires disabling unused modules for maximum speed.
+2. PaperMod
+Github Repo: adityatelange/hugo-PaperMod
+Why: Extremely fast (perfect 100/100 scores), native JSON-LD and OpenGraph support, simple i18n.
+Commercial Use: MIT License.
+Fit: "Profile Mode" or generic home info mode works well for single-product pages. Very minimal maintenance.
+3. Magnolia
+Github Repo: gohugothemes/hugo-theme-magnolia
+Why: Designed specifically for small business/landing pages with i18n support out of the box.
+Commercial Use: MIT License.
+Fit: Good visual balance between a blog and a product site without heavy customization.

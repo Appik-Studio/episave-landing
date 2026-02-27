@@ -1,0 +1,21 @@
+<section class="landing-hero">
+  <div class="landing-container">
+    <div class="hero-content">
+      <h1>{{ i18n "heroTitle" | default "Protecting lives with intelligent seizure detection" }}</h1>
+      <p class="hero-subtitle">
+        {{ i18n "heroSubtitle" | default "Real-time alerts on Android smartwatches to reduce SUDEP risks for epilepsy patients and their caregivers." }}
+      </p>
+      <div class="hero-actions">
+        <a href="{{ relLangURL "contact" }}" class="btn btn-primary">
+          {{ i18n "donate" | default "Donate / Contact" }}
+        </a>
+        <a href="{{ relLangURL "how-it-works" }}" class="btn btn-secondary">
+          {{ i18n "learnMore" | default "Learn More" }}
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/images/hero-watch.png" alt="{{ i18n "heroImageAlt" | default "EpiSave smartwatch seizure detection" }}" loading="eager" width="500" height="400">
+    </div>
+  </div>
+</section>

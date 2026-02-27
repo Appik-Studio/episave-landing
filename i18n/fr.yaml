@@ -1,0 +1,40 @@
+# Hero
+heroTitle: "Protéger des vies grâce à la détection intelligente des crises"
+heroSubtitle: "Alertes en temps réel sur montres connectées Android pour réduire les risques de SUDEP chez les patients épileptiques et leurs proches."
+heroImageAlt: "EpiSave détection de crises sur montre connectée"
+
+# Nav / CTA
+donate: "Don / Contact"
+learnMore: "En savoir plus"
+readMore: "Lire la suite →"
+allPosts: "Voir toutes les actualités →"
+latestNews: "Dernières actualités"
+
+# Features
+featuresTitle: "Pourquoi EpiSave ?"
+feature1Title: "Détection par montre connectée"
+feature1Desc: "Utilise l'accéléromètre et les capteurs de fréquence cardiaque des montres Android comme la TicWatch Pro 5 pour détecter les crises convulsives généralisées."
+feature2Title: "Alertes en temps réel"
+feature2Desc: "Notifications SMS instantanées avec localisation GPS envoyées aux aidants désignés lorsqu'une crise est détectée."
+feature3Title: "Réduction du risque SUDEP"
+feature3Desc: "Des temps de réponse plus rapides pour réduire le risque de Mort Subite Inattendue en Épilepsie (SUDEP)."
+feature4Title: "Application compagnon"
+feature4Desc: "Une application smartphone pour configurer les alertes, gérer les contacts des aidants et consulter l'historique des crises."
+
+# How it works
+howItWorksTitle: "Comment ça marche"
+step1Title: "Porter"
+step1Desc: "Le patient porte une montre connectée Android compatible tout au long de la journée."
+step2Title: "Détecter"
+step2Desc: "EpiSave surveille en continu les mouvements et la fréquence cardiaque pour identifier les signatures de crises."
+step3Title: "Alerter"
+step3Desc: "Lorsqu'une crise est détectée, les aidants reçoivent un SMS avec la localisation GPS du patient en quelques secondes."
+
+# Stats
+stat1: "des personnes développeront une épilepsie au cours de leur vie"
+stat2: "est la première cause de décès liés à l'épilepsie"
+stat3: "temps d'alerte aux aidants après la détection d'une crise"
+
+# CTA
+ctaTitle: "Soutenez EpiSave"
+ctaDesc: "Votre don nous aide à développer et distribuer la technologie de détection des crises à ceux qui en ont le plus besoin."

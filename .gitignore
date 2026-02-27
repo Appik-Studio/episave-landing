@@ -1,0 +1,17 @@
+# Hugo build output
+public/
+resources/_gen/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node (if using PostCSS/Tailwind later)
+node_modules/
+package-lock.json

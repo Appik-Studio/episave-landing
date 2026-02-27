@@ -1,0 +1,104 @@
+baseURL = "https://episave.ch"
+title = "EpiSave"
+theme = "PaperMod"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "EpiSave – Seizure Detection for Safer Lives"
+    [languages.en.params]
+      description = "EpiSave is a seizure detection system using Android smartwatches to provide real-time alerts and reduce SUDEP risks."
+
+  [languages.fr]
+    languageName = "Français"
+    weight = 2
+    title = "EpiSave – Détection de crises pour des vies plus sûres"
+    [languages.fr.params]
+      description = "EpiSave est un système de détection de crises utilisant des montres connectées Android pour fournir des alertes en temps réel et réduire les risques de SUDEP."
+
+[params]
+  env = "production"
+  author = "EpiSave"
+  defaultTheme = "light"
+  ShowReadingTime = false
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = false
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+
+  # JSON-LD structured data
+  [params.schema]
+    type = "Organization"
+    name = "EpiSave"
+    url = "https://episave.ch"
+    description = "Seizure detection system for generalized convulsive seizures using Android smartwatches."
+    logo = "https://episave.ch/images/logo.png"
+
+  # Open Graph / Twitter
+  images = ["/images/og-episave.png"]
+
+  [params.profileMode]
+    enabled = false
+
+  # Home info mode (landing-like)
+  [params.homeInfoParams]
+    Title = "Protecting lives with intelligent seizure detection"
+    Content = "Real-time alerts on Android smartwatches to reduce SUDEP risks for epilepsy patients and their caregivers."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/episave"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:contact@episave.ch"
+
+# Main menu
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "how-it-works"
+  name = "How It Works"
+  url = "/how-it-works/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "blog"
+  name = "News"
+  url = "/blog/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "contact"
+  name = "Donate / Contact"
+  url = "/contact/"
+  weight = 40

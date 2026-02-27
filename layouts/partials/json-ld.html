@@ -1,0 +1,109 @@
+{{/* JSON-LD Structured Data — Organization + WebSite + BreadcrumbList */}}
+
+{{/* Organization */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "EpiSave",
+  "url": "{{ site.BaseURL }}",
+  "logo": "{{ site.BaseURL }}images/logo.png",
+  "description": {{ site.Params.description | jsonify }},
+  "sameAs": [
+    {{ range $i, $social := site.Params.socialIcons }}
+    {{ if $i }},{{ end }}{{ $social.url | jsonify }}
+    {{ end }}
+  ]
+}
+</script>
+
+{{/* WebSite */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.Title | jsonify }},
+  "url": "{{ site.BaseURL }}",
+  "inLanguage": {{ site.Language.Lang | jsonify }}
+}
+</script>
+
+{{/* BreadcrumbList */}}
+{{ if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.BaseURL }}"
+    }
+    {{ if .Parent }}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Parent.Title | jsonify }},
+      "item": "{{ .Parent.Permalink }}"
+    }
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": "{{ .Permalink }}"
+    }
+    {{ else }}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Title | jsonify }},
+      "item": "{{ .Permalink }}"
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{/* Article — for blog posts */}}
+{{ if and (eq .Section "blog") .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Description | default .Summary | truncate 160 | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Organization",
+    "name": "EpiSave"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EpiSave",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.BaseURL }}images/logo.png"
+    }
+  },
+  "mainEntityOfPage": "{{ .Permalink }}"
+}
+</script>
+{{ end }}
+
+{{/* MedicalDevice — homepage */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalDevice",
+  "name": "EpiSave",
+  "description": "A seizure detection system for generalized convulsive seizures (GCS) using Android smartwatches and a companion smartphone app.",
+  "purpose": "Detection of generalized convulsive seizures with real-time caregiver alerts to reduce SUDEP risk",
+  "url": "{{ site.BaseURL }}"
+}
+</script>
+{{ end }}
