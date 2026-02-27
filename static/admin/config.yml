@@ -5,6 +5,7 @@ backend:
   name: github
   repo: Appik-Studio/episave-landing
   branch: main
+  base_url: https://sveltia-cms-auth.contact-247.workers.dev
   open_authoring: false
 
 # Staging: editorial workflow lets editors save drafts before publishing
