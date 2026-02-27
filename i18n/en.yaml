@@ -1,5 +1,5 @@
 # Hero
-heroTitle: "Protecting lives with intelligent seizure detection"
+heroTitle: "Protecting lives with <em>intelligent</em> seizure detection"
 heroSubtitle: "Real-time alerts on Android smartwatches to reduce SUDEP risks for epilepsy patients and their caregivers."
 heroImageAlt: "EpiSave smartwatch seizure detection"
 
@@ -38,3 +38,10 @@ stat3: "alert time to caregivers after seizure detection"
 # CTA
 ctaTitle: "Support EpiSave"
 ctaDesc: "Your donation helps us develop and distribute seizure detection technology to those who need it most."
+
+# New strings
+heroEyebrow: "Open-Source Medical Device"
+featuresSubtitle: "A complete seizure detection ecosystem built on accessible Android technology."
+heroStatus1: "Monitoring active"
+heroStatus2: "SMS alerts ready"
+heroStatus3: "GPS tracking enabled"

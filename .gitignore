@@ -18,3 +18,7 @@ package-lock.json
 
 .wrangler/
 .hugo_build.lock
+
+# Claude Code skills
+.claude/skills/
+skills-lock.json

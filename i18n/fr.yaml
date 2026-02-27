@@ -1,5 +1,5 @@
 # Hero
-heroTitle: "Protéger des vies grâce à la détection intelligente des crises"
+heroTitle: "Protéger des vies grâce à la détection <em>intelligente</em> des crises"
 heroSubtitle: "Alertes en temps réel sur montres connectées Android pour réduire les risques de SUDEP chez les patients épileptiques et leurs proches."
 heroImageAlt: "EpiSave détection de crises sur montre connectée"
 
@@ -38,3 +38,10 @@ stat3: "temps d'alerte aux aidants après la détection d'une crise"
 # CTA
 ctaTitle: "Soutenez EpiSave"
 ctaDesc: "Votre don nous aide à développer et distribuer la technologie de détection des crises à ceux qui en ont le plus besoin."
+
+# New strings
+heroEyebrow: "Dispositif Médical Open-Source"
+featuresSubtitle: "Un écosystème complet de détection des crises construit sur la technologie Android accessible."
+heroStatus1: "Surveillance active"
+heroStatus2: "Alertes SMS prêtes"
+heroStatus3: "Suivi GPS activé"
