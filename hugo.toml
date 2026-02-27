@@ -37,6 +37,7 @@ buildExpired = false
   env = "production"
   author = "EpiSave"
   defaultTheme = "light"
+  disableThemeToggle = true
   ShowReadingTime = false
   ShowShareButtons = true
   ShowPostNavLinks = true
