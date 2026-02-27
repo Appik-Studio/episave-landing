@@ -26,7 +26,9 @@
       "Read(//private/var/folders/70/yhkn3t8j2996z75_j5v4f64m0000gp/T/playwright-mcp-output/1772202932765/**)",
       "Bash(hugo server -D --port 1314)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1314)",
-      "Bash(hugo server -D --port 1315)"
+      "Bash(hugo server -D --port 1315)",
+      "Bash(git add assets/css/landing.css layouts/partials/extend_head.html layouts/partials/landing/hero.html .claude/settings.json)",
+      "Bash(git add .claude/settings.json)"
     ]
   }
 }
