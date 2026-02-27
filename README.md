@@ -48,14 +48,16 @@ episave-site/
 
 Editors can manage content at `https://episave-landing.pages.dev/admin/` — no local setup required.
 
-### Setup GitHub OAuth for Decap CMS
+### Setup GitHub App for Decap CMS
 
-1. Create a GitHub OAuth App: https://github.com/settings/developers
+1. Create a GitHub App: https://github.com/settings/apps/new
    - **Homepage URL**: `https://episave-landing.pages.dev`
-   - **Callback URL**: `https://<your-worker>.workers.dev/callback`
+   - **Callback URL**: `https://sveltia-cms-auth.contact-247.workers.dev/callback`
+   - **Permissions**: Contents (Read & Write), Pull requests (Read & Write)
+   - Install on `Appik-Studio/episave-landing` only
 2. Deploy [Sveltia CMS Auth](https://github.com/sveltia/sveltia-cms-auth) on Cloudflare Workers (one-click deploy)
 3. Set `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` env vars on the Worker
-4. Add `base_url` to `static/admin/config.yml` pointing to the Worker
+4. `base_url` is already configured in `static/admin/config.yml`
 
 ## Deployment (Cloudflare Pages)
 

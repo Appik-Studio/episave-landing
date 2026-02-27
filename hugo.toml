@@ -55,9 +55,9 @@ buildExpired = false
   [params.schema]
     type = "Organization"
     name = "EpiSave"
-    url = "https://episave.ch"
+    url = "https://episave-landing.pages.dev"
     description = "Seizure detection system for generalized convulsive seizures using Android smartwatches."
-    logo = "https://episave.ch/images/logo.png"
+    logo = "https://episave-landing.pages.dev/images/logo.png"
 
   # Open Graph / Twitter
   images = ["/images/og-episave.png"]

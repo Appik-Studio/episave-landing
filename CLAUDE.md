@@ -56,7 +56,7 @@ No `package.json` or Node.js dependencies. Hugo binary only. Required version: `
 
 ## Cloudflare Pages Deployment
 
-- **Base URL**: `https://episave-landing.pages.dev` (staging) / `https://episave.ch` (production)
+- **Base URL**: `https://episave-landing.pages.dev`
 - **Staging**: Every branch push creates a preview URL automatically
 - **Production**: Merge to `main` auto-deploys
 - **Build command**: `hugo --minify`

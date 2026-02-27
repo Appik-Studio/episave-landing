@@ -10,7 +10,23 @@
       "Bash(git rm --cached -r .wrangler .hugo_build.lock)",
       "Bash(git commit -m \"Fix multilingual structure: use file-naming convention for PaperMod compatibility\")",
       "Bash(npx skills add baphomet480/claude-skills@hugo-sveltia-cms -y)",
-      "Bash(npx skills add jackspace/claudeskillz@hugo -y)"
+      "Bash(npx skills add jackspace/claudeskillz@hugo -y)",
+      "Bash(git add assets/css/landing.css layouts/partials/landing/hero.html layouts/partials/landing/features.html layouts/partials/landing/cta.html layouts/partials/extend_head.html i18n/en.yaml i18n/fr.yaml)",
+      "Bash(git commit -m \"Redesign landing page: clinical warmth aesthetic with navy/coral palette\")",
+      "Bash(git add static/admin/config.yml)",
+      "Bash(git commit:*)",
+      "Bash(git push origin main)",
+      "WebFetch(domain:epiwatch.com)",
+      "Bash(python3 /Users/gaspardc/.claude/skills/ui-ux-pro-max/scripts/search.py \"medical device healthcare FDA seizure detection professional clinical trust\" --design-system -p \"EpiSave\")",
+      "Bash(python3 /Users/gaspardc/.claude/skills/ui-ux-pro-max/scripts/search.py \"medical healthcare clinical trust\" --domain typography -n 10)",
+      "Bash(python3 /Users/gaspardc/.claude/skills/ui-ux-pro-max/scripts/search.py \"medical healthcare professional\" --domain color -n 10)",
+      "Bash(hugo server -D --port 1313)",
+      "mcp__next-devtools__browser_eval",
+      "Read(//var/folders/70/yhkn3t8j2996z75_j5v4f64m0000gp/T/playwright-mcp-output/1772202932765/**)",
+      "Read(//private/var/folders/70/yhkn3t8j2996z75_j5v4f64m0000gp/T/playwright-mcp-output/1772202932765/**)",
+      "Bash(hugo server -D --port 1314)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1314)",
+      "Bash(hugo server -D --port 1315)"
     ]
   }
 }

@@ -1,5 +1,5 @@
 # Decap CMS Configuration for EpiSave
-# Editors access this at: https://episave.ch/admin/
+# Editors access this at: https://episave-landing.pages.dev/admin/
 
 backend:
   name: github
@@ -36,33 +36,58 @@ collections:
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
-  # Static pages
-  - name: pages
-    label: "Pages"
+  # Static pages (EN)
+  - name: pages-en
+    label: "Pages (EN)"
     files:
       - label: "About"
-        name: "about"
+        name: "about-en"
         file: "content/about.md"
-        i18n: true
         fields:
-          - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Description", name: "description", widget: "string", i18n: true }
-          - { label: "Body", name: "body", widget: "markdown", i18n: true }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "How It Works"
-        name: "how-it-works"
+        name: "how-it-works-en"
         file: "content/how-it-works.md"
-        i18n: true
         fields:
-          - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Description", name: "description", widget: "string", i18n: true }
-          - { label: "Body", name: "body", widget: "markdown", i18n: true }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Contact / Donate"
-        name: "contact"
+        name: "contact-en"
         file: "content/contact.md"
-        i18n: true
         fields:
-          - { label: "Title", name: "title", widget: "string", i18n: true }
-          - { label: "Description", name: "description", widget: "string", i18n: true }
-          - { label: "Body", name: "body", widget: "markdown", i18n: true }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  # Static pages (FR)
+  - name: pages-fr
+    label: "Pages (FR)"
+    files:
+      - label: "À propos"
+        name: "about-fr"
+        file: "content/about.fr.md"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Contenu", name: "body", widget: "markdown" }
+
+      - label: "Comment ça marche"
+        name: "how-it-works-fr"
+        file: "content/how-it-works.fr.md"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Contenu", name: "body", widget: "markdown" }
+
+      - label: "Contact / Don"
+        name: "contact-fr"
+        file: "content/contact.fr.md"
+        fields:
+          - { label: "Titre", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Contenu", name: "body", widget: "markdown" }
