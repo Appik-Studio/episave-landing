@@ -2,7 +2,21 @@
   {{/* Organic blob shape */}}
   <div class="hero-blob">
     <svg viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M 50 300 C 50 100, 250 20, 450 50 C 650 80, 800 150, 850 350 C 900 550, 800 750, 600 820 C 400 890, 150 800, 80 600 C 10 400, 50 300, 50 300 Z" fill="#DBEAFE" fill-opacity="0.45"/>
+      <path fill="#DBEAFE" fill-opacity="0.45">
+        <animate
+          attributeName="d"
+          dur="20s"
+          repeatCount="indefinite"
+          values="
+            M 50 300 C 50 100, 250 20, 450 50 C 650 80, 800 150, 850 350 C 900 550, 800 750, 600 820 C 400 890, 150 800, 80 600 C 10 400, 50 300, 50 300 Z;
+            M 80 250 C 100 80, 300 50, 500 80 C 700 110, 830 200, 860 400 C 890 600, 750 800, 550 850 C 350 900, 120 780, 60 550 C 0 320, 60 420, 80 250 Z;
+            M 30 350 C 20 130, 200 40, 420 30 C 640 20, 820 120, 870 320 C 920 520, 830 720, 630 800 C 430 880, 180 830, 100 630 C 20 430, 40 570, 30 350 Z;
+            M 50 300 C 50 100, 250 20, 450 50 C 650 80, 800 150, 850 350 C 900 550, 800 750, 600 820 C 400 890, 150 800, 80 600 C 10 400, 50 300, 50 300 Z
+          "
+          calcMode="spline"
+          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+        />
+      </path>
     </svg>
   </div>
   <div class="landing-container">
