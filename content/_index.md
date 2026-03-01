@@ -1,5 +1,5 @@
 ---
-title: EpiSave – Seizure Detection for Safer Lives!
+title: EpiSave – Seizure Detection for Safer Lives
 description: EpiSave is a seizure detection system using Android smartwatches to
   provide real-time alerts and reduce SUDEP risks.
 hero:
@@ -11,7 +11,7 @@ hero:
   cta_primary: Donate / Contact
   subtitle: Real-time alerts on Android smartwatches to reduce SUDEP risks for
     epilepsy patients and their caregivers.
-  title: Protecting lives with <em>intelligent</em> seizure detection
+  title: Protecting lives with <em>intelligent</em> seizure detection!
   status1: Monitoring active
 features:
   feature4_desc: A smartphone companion app to configure alerts, manage caregiver
