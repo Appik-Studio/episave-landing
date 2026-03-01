@@ -8,8 +8,9 @@ backend:
   base_url: https://sveltia-cms-auth.contact-247.workers.dev
   open_authoring: false
 
-# Staging: editorial workflow lets editors save drafts before publishing
-publish_mode: editorial_workflow
+# Disable live preview pane in the editor
+editor:
+  preview: false
 
 # Media files stored in static/images
 media_folder: static/images
