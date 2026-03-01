@@ -1,8 +1,9 @@
 ---
-title: "How It Works"
-description: "Discover how EpiSave detects seizures using Android smartwatches and alerts caregivers in real time."
-layout: "single"
-url: "/how-it-works/"
+title: How It Works!
+description: Discover how EpiSave detects seizures using Android smartwatches
+  and alerts caregivers in real time.
+layout: single
+url: /how-it-works/
 ---
 
 ## Detection Technology
