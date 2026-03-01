@@ -5,7 +5,7 @@ description: EpiSave is a seizure detection system using Android smartwatches to
 hero:
   status2: SMS alerts ready
   status3: GPS tracking enabled
-  image_alt: EpiSave smartwatch seizure detection!
+  image_alt: EpiSave smartwatch seizure detection
   cta_secondary: Learn More
   eyebrow: Open-Source Medical Device
   cta_primary: Donate / Contact
