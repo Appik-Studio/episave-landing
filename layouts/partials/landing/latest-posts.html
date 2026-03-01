@@ -1,6 +1,6 @@
 <section class="landing-posts" id="news">
   <div class="landing-container">
-    <h2 class="section-title">{{ i18n "latestNews" | default "Latest News" }}</h2>
+    <h2 class="section-title">{{ .Params.news.title | default "Latest News" }}</h2>
     <div class="posts-grid">
       {{ $pages := where site.RegularPages "Section" "blog" }}
       {{ range first 3 $pages }}
@@ -8,12 +8,12 @@
         <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
         <p>{{ .Summary | truncate 120 }}</p>
-        <a href="{{ .Permalink }}" class="read-more">{{ i18n "readMore" | default "Read more →" }}</a>
+        <a href="{{ .Permalink }}" class="read-more">{{ $.Params.news.read_more | default "Read more →" }}</a>
       </article>
       {{ end }}
     </div>
     <div class="posts-all">
-      <a href="{{ relLangURL "blog" }}">{{ i18n "allPosts" | default "View all news →" }}</a>
+      <a href="{{ relLangURL "blog" }}">{{ .Params.news.view_all | default "View all news →" }}</a>
     </div>
   </div>
 </section>

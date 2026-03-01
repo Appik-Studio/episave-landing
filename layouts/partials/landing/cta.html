@@ -1,11 +1,11 @@
 <section class="landing-cta" id="donate">
   <div class="landing-container">
     <div class="cta-inner">
-      <h2>{{ i18n "ctaTitle" | default "Support EpiSave" }}</h2>
-      <p>{{ i18n "ctaDesc" | default "Your donation helps us develop and distribute seizure detection technology to those who need it most." }}</p>
+      <h2>{{ .Params.cta.title | default "Support EpiSave" }}</h2>
+      <p>{{ .Params.cta.description | default "Your donation helps us develop and distribute seizure detection technology to those who need it most." }}</p>
       <div class="cta-actions">
         <a href="mailto:contact@episave.ch" class="btn btn-on-dark btn-large">
-          {{ i18n "donate" | default "Contact Us" }}
+          {{ .Params.cta.button_text | default "Contact Us" }}
         </a>
       </div>
     </div>

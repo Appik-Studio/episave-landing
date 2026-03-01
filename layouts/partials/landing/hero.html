@@ -23,37 +23,37 @@
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span class="dot"></span>
-        {{ i18n "heroEyebrow" | default "Open-Source Medical Device" }}
+        {{ .Params.hero.eyebrow | default "Open-Source Medical Device" }}
       </div>
-      <h1>{{ i18n "heroTitle" | default "Protecting lives with <em>intelligent</em> seizure detection" | safeHTML }}</h1>
+      <h1>{{ .Params.hero.title | default "Protecting lives with <em>intelligent</em> seizure detection" | safeHTML }}</h1>
       <p class="hero-subtitle">
-        {{ i18n "heroSubtitle" | default "Real-time alerts on Android smartwatches to reduce SUDEP risks for epilepsy patients and their caregivers." }}
+        {{ .Params.hero.subtitle | default "Real-time alerts on Android smartwatches to reduce SUDEP risks for epilepsy patients and their caregivers." }}
       </p>
       <div class="hero-actions">
         <a href="#donate" class="btn btn-primary">
-          {{ i18n "donate" | default "Contact" }}
+          {{ .Params.hero.cta_primary | default "Contact" }}
         </a>
         <a href="#how-it-works" class="btn btn-secondary">
-          {{ i18n "learnMore" | default "Learn More" }}
+          {{ .Params.hero.cta_secondary | default "Learn More" }}
         </a>
       </div>
     </div>
     <div class="hero-visual">
       <div class="hero-visual-card">
         <div class="hero-floating-badge">&lt; 30s</div>
-        <img src="/images/hero-watch.png" alt="{{ i18n "heroImageAlt" | default "Smartwatch displaying EpiSave seizure detection with real-time monitoring" }}" class="hero-photo" />
+        <img src="/images/hero-watch.png" alt="{{ .Params.hero.image_alt | default "Smartwatch displaying EpiSave seizure detection with real-time monitoring" }}" class="hero-photo" />
         <div class="hero-status-list">
           <div class="hero-status-item">
             <span class="status-dot green"></span>
-            {{ i18n "heroStatus1" | default "Monitoring active" }}
+            {{ .Params.hero.status1 | default "Monitoring active" }}
           </div>
           <div class="hero-status-item">
             <span class="status-dot blue"></span>
-            {{ i18n "heroStatus2" | default "SMS alerts ready" }}
+            {{ .Params.hero.status2 | default "SMS alerts ready" }}
           </div>
           <div class="hero-status-item">
             <span class="status-dot indigo"></span>
-            {{ i18n "heroStatus3" | default "GPS tracking enabled" }}
+            {{ .Params.hero.status3 | default "GPS tracking enabled" }}
           </div>
         </div>
       </div>

@@ -1,24 +1,24 @@
 <section class="landing-how-it-works" id="how-it-works">
   <div class="landing-container">
-    <h2 class="section-title">{{ i18n "howItWorksTitle" | default "How It Works" }}</h2>
+    <h2 class="section-title">{{ .Params.how_it_works.title | default "How It Works" }}</h2>
     <div class="steps">
 
       <div class="step">
         <div class="step-number">1</div>
-        <h3>{{ i18n "step1Title" | default "Wear" }}</h3>
-        <p>{{ i18n "step1Desc" | default "The patient wears a compatible Android smartwatch throughout the day." }}</p>
+        <h3>{{ .Params.how_it_works.step1_title | default "Wear" }}</h3>
+        <p>{{ .Params.how_it_works.step1_desc | default "The patient wears a compatible Android smartwatch throughout the day." }}</p>
       </div>
 
       <div class="step">
         <div class="step-number">2</div>
-        <h3>{{ i18n "step2Title" | default "Detect" }}</h3>
-        <p>{{ i18n "step2Desc" | default "EpiSave continuously monitors motion and heart rate patterns to identify seizure signatures." }}</p>
+        <h3>{{ .Params.how_it_works.step2_title | default "Detect" }}</h3>
+        <p>{{ .Params.how_it_works.step2_desc | default "EpiSave continuously monitors motion and heart rate patterns to identify seizure signatures." }}</p>
       </div>
 
       <div class="step">
         <div class="step-number">3</div>
-        <h3>{{ i18n "step3Title" | default "Alert" }}</h3>
-        <p>{{ i18n "step3Desc" | default "When a seizure is detected, caregivers receive an SMS with the patient's GPS location within seconds." }}</p>
+        <h3>{{ .Params.how_it_works.step3_title | default "Alert" }}</h3>
+        <p>{{ .Params.how_it_works.step3_desc | default "When a seizure is detected, caregivers receive an SMS with the patient's GPS location within seconds." }}</p>
       </div>
 
     </div>

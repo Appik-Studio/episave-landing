@@ -54,7 +54,8 @@
       "Bash(kill 22769)"
     ],
     "additionalDirectories": [
-      "/tmp/claude-*"
+      "/tmp/claude-*",
+      "/Users/gaspardc/Development/episave-site/.git/modules/themes/PaperMod"
     ]
   }
 }

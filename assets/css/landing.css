@@ -253,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ============ Hero ============ */
 .landing-hero {
   padding: 8rem 0 6rem;
-  background: linear-gradient(180deg, var(--epi-white) 0%, var(--epi-surface) 100%);
+  background: linear-gradient(180deg, var(--epi-surface) 0%, var(--epi-white) 100%);
   position: relative;
   overflow-x: clip;
 }

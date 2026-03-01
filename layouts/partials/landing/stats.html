@@ -2,16 +2,16 @@
   <div class="landing-container">
     <div class="stats-grid">
       <div class="stat">
-        <span class="stat-number">65M</span>
-        <span class="stat-label">{{ i18n "stat1" | default "persons with epilepsy worldwide" }}</span>
+        <span class="stat-number">{{ .Params.stats.stat1_number | default "65M" }}</span>
+        <span class="stat-label">{{ .Params.stats.stat1_label | default "persons with epilepsy worldwide" }}</span>
       </div>
       <div class="stat">
-        <span class="stat-number">65K</span>
-        <span class="stat-label">{{ i18n "stat2" | default "SUDEP deaths per year worldwide" }}</span>
+        <span class="stat-number">{{ .Params.stats.stat2_number | default "65K" }}</span>
+        <span class="stat-label">{{ .Params.stats.stat2_label | default "SUDEP deaths per year worldwide" }}</span>
       </div>
       <div class="stat">
-        <span class="stat-number">&lt; 30s</span>
-        <span class="stat-label">{{ i18n "stat3" | default "alert time to caregivers after seizure detection" }}</span>
+        <span class="stat-number">{{ .Params.stats.stat3_number | default "< 30s" | safeHTML }}</span>
+        <span class="stat-label">{{ .Params.stats.stat3_label | default "alert time to caregivers after seizure detection" }}</span>
       </div>
     </div>
   </div>

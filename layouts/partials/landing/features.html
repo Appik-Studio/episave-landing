@@ -1,7 +1,7 @@
 <section class="landing-features" id="features">
   <div class="landing-container">
-    <h2 class="section-title">{{ i18n "featuresTitle" | default "Why EpiSave?" }}</h2>
-    <p class="section-subtitle">{{ i18n "featuresSubtitle" | default "A complete seizure detection ecosystem built on accessible Android technology." }}</p>
+    <h2 class="section-title">{{ .Params.features.title | default "Why EpiSave?" }}</h2>
+    <p class="section-subtitle">{{ .Params.features.subtitle | default "A complete seizure detection ecosystem built on accessible Android technology." }}</p>
     <div class="features-grid">
 
       <div class="feature-card animate-on-scroll">
@@ -9,8 +9,8 @@
           {{/* Carbon: Watch */}}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><path d="M22 8h-2V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4h-2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4h2a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-8-4h4v4h-4zm4 24h-4v-4h4zm4-6H10V10h12z"/><path d="M15 12v5h4v-2h-2v-3h-2z"/></svg>
         </div>
-        <h3>{{ i18n "feature1Title" | default "Smartwatch-Based Detection" }}</h3>
-        <p>{{ i18n "feature1Desc" | default "Uses accelerometer and heart rate sensors on Android smartwatches like TicWatch Pro 5 to detect generalized convulsive seizures." }}</p>
+        <h3>{{ .Params.features.feature1_title | default "Smartwatch-Based Detection" }}</h3>
+        <p>{{ .Params.features.feature1_desc | default "Uses accelerometer and heart rate sensors on Android smartwatches like TicWatch Pro 5 to detect generalized convulsive seizures." }}</p>
       </div>
 
       <div class="feature-card animate-on-scroll">
@@ -18,8 +18,8 @@
           {{/* Carbon: Notification */}}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><path d="M28.707 19.293L26 16.586V13a10.014 10.014 0 0 0-9-9.95V1h-2v2.05A10.014 10.014 0 0 0 6 13v3.586l-2.707 2.707A1 1 0 0 0 3 20v3a1 1 0 0 0 1 1h7v1a5 5 0 0 0 10 0v-1h7a1 1 0 0 0 1-1v-3a1 1 0 0 0-.293-.707zM19 25a3 3 0 0 1-6 0v-1h6zm8-3H5v-1.586l2.707-2.707A1 1 0 0 0 8 17v-4a8 8 0 0 1 16 0v4a1 1 0 0 0 .293.707L27 20.414z"/></svg>
         </div>
-        <h3>{{ i18n "feature2Title" | default "Real-Time Alerts" }}</h3>
-        <p>{{ i18n "feature2Desc" | default "Instant SMS notifications with GPS location sent to designated caregivers when a seizure is detected." }}</p>
+        <h3>{{ .Params.features.feature2_title | default "Real-Time Alerts" }}</h3>
+        <p>{{ .Params.features.feature2_desc | default "Instant SMS notifications with GPS location sent to designated caregivers when a seizure is detected." }}</p>
       </div>
 
       <div class="feature-card animate-on-scroll">
@@ -27,8 +27,8 @@
           {{/* Carbon: Shield Checkmark */}}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><path d="M14 21.414l-5-5.001L10.413 15 14 18.586 21.585 11 23 12.414l-9 9z"/><path d="M16 30l-6.176-3.293A10.982 10.982 0 0 1 4 17V4a2.002 2.002 0 0 1 2-2h20a2.002 2.002 0 0 1 2 2v13a10.982 10.982 0 0 1-5.824 9.707zM6 4v13a8.985 8.985 0 0 0 4.766 7.942L16 27.733l5.234-2.79A8.985 8.985 0 0 0 26 17V4z"/></svg>
         </div>
-        <h3>{{ i18n "feature3Title" | default "Reducing SUDEP Risk" }}</h3>
-        <p>{{ i18n "feature3Desc" | default "Faster response times help reduce the risk of Sudden Unexpected Death in Epilepsy (SUDEP)." }}</p>
+        <h3>{{ .Params.features.feature3_title | default "Reducing SUDEP Risk" }}</h3>
+        <p>{{ .Params.features.feature3_desc | default "Faster response times help reduce the risk of Sudden Unexpected Death in Epilepsy (SUDEP)." }}</p>
       </div>
 
       <div class="feature-card animate-on-scroll">
@@ -36,8 +36,8 @@
           {{/* Carbon: Mobile */}}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="currentColor"><path d="M23 7h-3V5a2.002 2.002 0 0 0-2-2h-4a2.002 2.002 0 0 0-2 2v2H9a2.002 2.002 0 0 0-2 2v18a2.002 2.002 0 0 0 2 2h14a2.002 2.002 0 0 0 2-2V9a2.002 2.002 0 0 0-2-2zm-9-2h4v4h-4zm9 22H9V9h3v2h8V9h3z"/></svg>
         </div>
-        <h3>{{ i18n "feature4Title" | default "Companion App" }}</h3>
-        <p>{{ i18n "feature4Desc" | default "A smartphone companion app to configure alerts, manage caregiver contacts, and review seizure logs." }}</p>
+        <h3>{{ .Params.features.feature4_title | default "Companion App" }}</h3>
+        <p>{{ .Params.features.feature4_desc | default "A smartphone companion app to configure alerts, manage caregiver contacts, and review seizure logs." }}</p>
       </div>
 
     </div>

@@ -36,58 +36,160 @@ collections:
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown", i18n: true }
 
-  # Static pages (EN)
-  - name: pages-en
-    label: "Pages (EN)"
+  # Homepage (EN)
+  - name: homepage-en
+    label: "Homepage (EN)"
     files:
-      - label: "About"
-        name: "about-en"
-        file: "content/about.md"
+      - label: "Homepage"
+        name: "homepage-en"
+        file: "content/_index.md"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Title (SEO)", name: "title", widget: "string" }
+          - { label: "Description (SEO)", name: "description", widget: "string" }
 
-      - label: "How It Works"
-        name: "how-it-works-en"
-        file: "content/how-it-works.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title (HTML allowed)", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+              - { label: "Primary CTA", name: "cta_primary", widget: "string" }
+              - { label: "Secondary CTA", name: "cta_secondary", widget: "string" }
+              - { label: "Status 1", name: "status1", widget: "string" }
+              - { label: "Status 2", name: "status2", widget: "string" }
+              - { label: "Status 3", name: "status3", widget: "string" }
 
-      - label: "Contact / Donate"
-        name: "contact-en"
-        file: "content/contact.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Features"
+            name: "features"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Feature 1 Title", name: "feature1_title", widget: "string" }
+              - { label: "Feature 1 Description", name: "feature1_desc", widget: "text" }
+              - { label: "Feature 2 Title", name: "feature2_title", widget: "string" }
+              - { label: "Feature 2 Description", name: "feature2_desc", widget: "text" }
+              - { label: "Feature 3 Title", name: "feature3_title", widget: "string" }
+              - { label: "Feature 3 Description", name: "feature3_desc", widget: "text" }
+              - { label: "Feature 4 Title", name: "feature4_title", widget: "string" }
+              - { label: "Feature 4 Description", name: "feature4_desc", widget: "text" }
 
-  # Static pages (FR)
-  - name: pages-fr
-    label: "Pages (FR)"
+          - label: "How It Works"
+            name: "how_it_works"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Step 1 Title", name: "step1_title", widget: "string" }
+              - { label: "Step 1 Description", name: "step1_desc", widget: "text" }
+              - { label: "Step 2 Title", name: "step2_title", widget: "string" }
+              - { label: "Step 2 Description", name: "step2_desc", widget: "text" }
+              - { label: "Step 3 Title", name: "step3_title", widget: "string" }
+              - { label: "Step 3 Description", name: "step3_desc", widget: "text" }
+
+          - label: "Stats"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Stat 1 Number", name: "stat1_number", widget: "string" }
+              - { label: "Stat 1 Label", name: "stat1_label", widget: "string" }
+              - { label: "Stat 2 Number", name: "stat2_number", widget: "string" }
+              - { label: "Stat 2 Label", name: "stat2_label", widget: "string" }
+              - { label: "Stat 3 Number", name: "stat3_number", widget: "string" }
+              - { label: "Stat 3 Label", name: "stat3_label", widget: "string" }
+
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button Text", name: "button_text", widget: "string" }
+
+          - label: "News Section"
+            name: "news"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Read More Link", name: "read_more", widget: "string" }
+              - { label: "View All Link", name: "view_all", widget: "string" }
+
+  # Homepage (FR)
+  - name: homepage-fr
+    label: "Homepage (FR)"
     files:
-      - label: "À propos"
-        name: "about-fr"
-        file: "content/about.fr.md"
+      - label: "Page d'accueil"
+        name: "homepage-fr"
+        file: "content/_index.fr.md"
         fields:
-          - { label: "Titre", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Contenu", name: "body", widget: "markdown" }
+          - { label: "Titre (SEO)", name: "title", widget: "string" }
+          - { label: "Description (SEO)", name: "description", widget: "string" }
 
-      - label: "Comment ça marche"
-        name: "how-it-works-fr"
-        file: "content/how-it-works.fr.md"
-        fields:
-          - { label: "Titre", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Contenu", name: "body", widget: "markdown" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Accroche", name: "eyebrow", widget: "string" }
+              - { label: "Titre (HTML autorisé)", name: "title", widget: "string" }
+              - { label: "Sous-titre", name: "subtitle", widget: "text" }
+              - { label: "Texte alt image", name: "image_alt", widget: "string" }
+              - { label: "CTA principal", name: "cta_primary", widget: "string" }
+              - { label: "CTA secondaire", name: "cta_secondary", widget: "string" }
+              - { label: "Statut 1", name: "status1", widget: "string" }
+              - { label: "Statut 2", name: "status2", widget: "string" }
+              - { label: "Statut 3", name: "status3", widget: "string" }
 
-      - label: "Contact / Don"
-        name: "contact-fr"
-        file: "content/contact.fr.md"
-        fields:
-          - { label: "Titre", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Contenu", name: "body", widget: "markdown" }
+          - label: "Fonctionnalités"
+            name: "features"
+            widget: "object"
+            fields:
+              - { label: "Titre de section", name: "title", widget: "string" }
+              - { label: "Sous-titre de section", name: "subtitle", widget: "string" }
+              - { label: "Fonctionnalité 1 Titre", name: "feature1_title", widget: "string" }
+              - { label: "Fonctionnalité 1 Description", name: "feature1_desc", widget: "text" }
+              - { label: "Fonctionnalité 2 Titre", name: "feature2_title", widget: "string" }
+              - { label: "Fonctionnalité 2 Description", name: "feature2_desc", widget: "text" }
+              - { label: "Fonctionnalité 3 Titre", name: "feature3_title", widget: "string" }
+              - { label: "Fonctionnalité 3 Description", name: "feature3_desc", widget: "text" }
+              - { label: "Fonctionnalité 4 Titre", name: "feature4_title", widget: "string" }
+              - { label: "Fonctionnalité 4 Description", name: "feature4_desc", widget: "text" }
+
+          - label: "Comment ça marche"
+            name: "how_it_works"
+            widget: "object"
+            fields:
+              - { label: "Titre de section", name: "title", widget: "string" }
+              - { label: "Étape 1 Titre", name: "step1_title", widget: "string" }
+              - { label: "Étape 1 Description", name: "step1_desc", widget: "text" }
+              - { label: "Étape 2 Titre", name: "step2_title", widget: "string" }
+              - { label: "Étape 2 Description", name: "step2_desc", widget: "text" }
+              - { label: "Étape 3 Titre", name: "step3_title", widget: "string" }
+              - { label: "Étape 3 Description", name: "step3_desc", widget: "text" }
+
+          - label: "Statistiques"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Stat 1 Nombre", name: "stat1_number", widget: "string" }
+              - { label: "Stat 1 Libellé", name: "stat1_label", widget: "string" }
+              - { label: "Stat 2 Nombre", name: "stat2_number", widget: "string" }
+              - { label: "Stat 2 Libellé", name: "stat2_label", widget: "string" }
+              - { label: "Stat 3 Nombre", name: "stat3_number", widget: "string" }
+              - { label: "Stat 3 Libellé", name: "stat3_label", widget: "string" }
+
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Texte du bouton", name: "button_text", widget: "string" }
+
+          - label: "Section Actualités"
+            name: "news"
+            widget: "object"
+            fields:
+              - { label: "Titre de section", name: "title", widget: "string" }
+              - { label: "Lien Lire la suite", name: "read_more", widget: "string" }
+              - { label: "Lien Voir tout", name: "view_all", widget: "string" }
