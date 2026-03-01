@@ -39,7 +39,22 @@
       "Bash(curl -s http://localhost:1313/blog/introducing-episave/)",
       "Bash(tr '>' '\\\\n')",
       "Bash(pkill -f \"hugo server\")",
-      "Bash(curl -s http://localhost:1313/tags/launch/)"
+      "Bash(curl -s http://localhost:1313/tags/launch/)",
+      "Bash(lsof -ti:1313)",
+      "Bash(xargs kill -9)",
+      "Bash(git add assets/css/landing.css)",
+      "Bash(git add assets/css/landing.css layouts/partials/landing/hero.html)",
+      "Bash(git config -f .gitmodules --get-regexp path)",
+      "Bash(git -C /Users/gaspardc/Development/episave-site submodule status)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:1314/)",
+      "Bash(pkill -f \"playwright\")",
+      "Bash(curl -s http://localhost:1314/)",
+      "Bash(curl -s http://localhost:1314/fr/)",
+      "Bash(npx -y playwright screenshot --browser chromium \"http://localhost:1314/\" /tmp/episave-hero.png --full-page)",
+      "Bash(kill 22769)"
+    ],
+    "additionalDirectories": [
+      "/tmp/claude-*"
     ]
   }
 }

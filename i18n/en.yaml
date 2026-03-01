@@ -31,8 +31,8 @@ step3Title: "Alert"
 step3Desc: "When a seizure is detected, caregivers receive an SMS with the patient's GPS location within seconds."
 
 # Stats
-stat1: "people will develop epilepsy in their lifetime"
-stat2: "is the leading cause of epilepsy-related death"
+stat1: "persons with epilepsy worldwide"
+stat2: "SUDEP deaths per year worldwide"
 stat3: "alert time to caregivers after seizure detection"
 
 # CTA

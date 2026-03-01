@@ -31,8 +31,8 @@ step3Title: "Alerter"
 step3Desc: "Lorsqu'une crise est détectée, les aidants reçoivent un SMS avec la localisation GPS du patient en quelques secondes."
 
 # Stats
-stat1: "des personnes développeront une épilepsie au cours de leur vie"
-stat2: "est la première cause de décès liés à l'épilepsie"
+stat1: "personnes atteintes d'épilepsie dans le monde"
+stat2: "décès SUDEP par an dans le monde"
 stat3: "temps d'alerte aux aidants après la détection d'une crise"
 
 # CTA
