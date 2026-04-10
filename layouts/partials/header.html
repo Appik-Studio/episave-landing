@@ -1,0 +1,64 @@
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="EpiSave (Alt + H)">
+                {{/* Inline SVG logo — EKG Watch mark */}}
+                <svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="5 14 86 72" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    {{/* Watch lugs */}}
+                    <rect x="50" y="18" width="16" height="10" rx="3" fill="currentColor" stroke="none"/>
+                    <rect x="50" y="72" width="16" height="10" rx="3" fill="currentColor" stroke="none"/>
+                    {{/* Watch body */}}
+                    <circle cx="58" cy="50" r="24"/>
+                    {{/* Crown button */}}
+                    <rect x="80" y="46" width="6" height="8" rx="2" fill="currentColor" stroke="none"/>
+                    {{/* EKG pulse line */}}
+                    <polyline points="10,50 22,50 28,38 34,62 40,44 46,50 58,50" stroke-width="4.5" fill="none"/>
+                    {{/* Accent dot */}}
+                    <circle cx="58" cy="50" r="4" fill="var(--epi-blue)" stroke="none"/>
+                </svg>
+                <span class="logo-text">EpiSave</span>
+            </a>
+            <div class="logo-switches">
+                {{- if (not site.Params.disableLangToggle) }}
+                    {{- $lang := .Lang }}
+                    {{- with site.Home.Translations }}
+                    <ul class="lang-switch">
+                        {{- range . -}}
+                        {{- if ne $lang .Lang }}
+                        <li>
+                            <a href="{{- .Permalink -}}" title="{{ .Language.LanguageName | default (.Lang | title) }}"
+                                aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
+                                {{- .Lang | upper -}}
+                            </a>
+                        </li>
+                        {{- end -}}
+                        {{- end }}
+                    </ul>
+                    {{- end }}
+                {{- end }}
+            </div>
+        </div>
+
+        {{- $currentPage := . }}
+        <ul id="menu">
+            {{- range site.Menus.main }}
+            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+            {{- $page_url := $currentPage.Permalink | absLangURL }}
+            <li>
+                <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
+                    <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                        {{- .Name -}}
+                    </span>
+                    {{- if (findRE "://" .URL) }}&nbsp;
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                    {{- end }}
+                </a>
+            </li>
+            {{- end }}
+        </ul>
+    </nav>
+</header>

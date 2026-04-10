@@ -100,23 +100,23 @@ draft: false
 
 ## Design System (CSS Variables)
 
-Defined in `assets/css/landing.css`:
+Defined in `assets/css/landing.css` — "Clinical Blue & Slate" theme:
 
 ```css
---epi-navy: #0B1D3A       /* headings */
---epi-blue: #0284C7       /* primary CTA */
---epi-teal: #0D9488       /* secondary */
---epi-indigo: #4F46E5     /* accent */
---epi-surface: #F8FAFC    /* background */
+--epi-navy: #0F172A       /* navy — headings */
+--epi-blue: #0284C7       /* clinical blue — primary CTA, buttons */
+--epi-teal: #0D9488       /* teal — secondary accent */
+--epi-indigo: #4F46E5     /* indigo — accent */
+--epi-surface: #F8FAFC    /* cool white — background */
 --epi-white: #FFFFFF      /* cards */
 --epi-border: #E2E8F0     /* borders */
 --epi-text: #0F172A       /* body text */
---epi-text-soft: #475569  /* secondary text */
+--epi-text-soft: #64748B  /* secondary text */
 ```
 
-**Typography**: Lexend (headings, 400-800) + Source Sans 3 (body, 400-600) via Google Fonts.
+**Typography**: IBM Plex Sans (400-700 + italics) via Google Fonts — single typeface for institutional clinical precision.
 
-**Key CSS features**: animated SVG hero blob (20s morph cycle), scroll-triggered animations via Intersection Observer, sticky header with backdrop blur, dark mode variables, shimmer hover effects on buttons.
+**Key CSS features**: subtle SVG hero blob (30s morph cycle), scroll-triggered animations via Intersection Observer, sticky header with backdrop blur, dark mode variables, `prefers-reduced-motion` support.
 
 ## Structured Data (JSON-LD)
 
@@ -152,3 +152,27 @@ Injected via `layouts/partials/json-ld.html`:
 - **Build command**: `hugo --minify`
 - **Deploy command**: `npx wrangler pages deploy public`
 - **Env var**: `HUGO_VERSION=0.147.0`
+
+## Design Context
+
+### Users
+Mixed audience in roughly equal measure:
+- **Patients & caregivers** — people living with epilepsy and their families seeking safety solutions
+- **Medical professionals** — neurologists, researchers, and clinicians evaluating the device
+- **Donors & partners** — NGOs, foundations, and individuals considering funding or collaboration
+
+### Brand Personality
+**Clinical, precise, credible.** The site should feel like a serious medical-tech product (think Withings/Oura — clean, premium, quietly authoritative). Target emotion: confidence & trust.
+
+### Aesthetic Direction
+- Clean medical-tech aesthetic. Premium and restrained, not warm or playful.
+- References: Withings, Oura. Anti-references: charity/nonprofit aesthetics, consumer tech hype.
+- Light mode primary. Current purple & amber palette is **open to reconsideration** for better clinical fit.
+- Typography: IBM Plex Sans (400-700 + italics) — single typeface for institutional clinical precision.
+
+### Design Principles
+1. **Clinical credibility over warmth** — restrained color, precise alignment, generous whitespace.
+2. **Information density matched to audience** — stats and evidence immediately scannable.
+3. **Quiet confidence** — clarity over flashiness, subtle animations respecting `prefers-reduced-motion`.
+4. **Accessible by default** — WCAG AA baseline. Avoid rapid flashing given epilepsy context.
+5. **Bilingual parity** — EN/FR equally polished, accommodate French text expansion (~15-20%).

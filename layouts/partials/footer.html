@@ -11,6 +11,13 @@
     {{- with site.Params.footer.text }}
         {{ . | markdownify }}
     {{- end }}
+    <span class="footer-chuv">
+      {{- if eq .Lang "fr" -}}
+        Un projet développé au CHUV — Centre hospitalier universitaire vaudois
+      {{- else -}}
+        A project developed at CHUV — Centre hospitalier universitaire vaudois
+      {{- end -}}
+    </span>
 </footer>
 {{- end }}
 
